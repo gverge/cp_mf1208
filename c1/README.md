@@ -5,6 +5,9 @@
   - Describir las características de los soportes y los riesgos inherentes a cada uno de ellos.
   - Aplicar los procedimientos de comprobación de soportes utilizando herramientas específicas, registrando los resultados y las incidencias producidas.
 
+## Mapa Conceptual
+
+<img src="manteniment.gif">
 
 ## 1.1 Procés de resolució d'avaries
 
