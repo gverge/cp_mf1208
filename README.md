@@ -1,1 +1,1 @@
-- C1: Descriure les tècniques i aplicar-les en els procediments de comprovació de la funcionalitat de suports i perifèrics per verificar-los, seguint instruccions detallades.
+- [C1: Descriure les tècniques i aplicar-les en els procediments de comprovació de la funcionalitat de suports i perifèrics per verificar-los, seguint instruccions detallades.](c1)
