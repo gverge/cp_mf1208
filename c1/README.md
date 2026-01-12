@@ -2,8 +2,8 @@
 - CE1.2 Interpretar las guías de instrucciones recibidas referentes a procedimientos de comprobación de funcionalidad de soportes y periféricos para poder comprobar y verificar el buen funcionamiento de los mismos.
 - CE1.3 Citar las características de las herramientas utilizadas para comprobar el estado de los soportes y de la información contenida en los mismos, siguiendo guías de uso.
 - CE1.4 En un equipo microinformático con unidades lectoras y varios soportes, siguiendo las guías de instrucciones, realizar las siguientes operaciones:
- - Describir las características de los soportes y los riesgos inherentes a cada uno de ellos.
- - Aplicar los procedimientos de comprobación de soportes utilizando herramientas específicas, registrando los resultados y las incidencias producidas.
+  - Describir las características de los soportes y los riesgos inherentes a cada uno de ellos.
+  - Aplicar los procedimientos de comprobación de soportes utilizando herramientas específicas, registrando los resultados y las incidencias producidas.
 
 
 ## 1.1 Procés de resolució d'avaries
