@@ -1,1 +1,12 @@
-C3
+- CE3.1 Describir los tipos de elementos consumibles inherentes a los diferentes periféricos existentes en un sistema microinformático, teniendo en cuenta las diferentes tecnologías.
+- CE3.2 Citar la normativa existente sobre el reciclado y eliminación de consumibles informáticos enmarcadas en el respeto al medio ambiente.
+- CE3.3 Interpretar los procedimientos de sustitución de elementos consumibles en impresoras y otros periféricos a partir de guías detalladas y documentación suministrada por el fabricante.
+- CE3.4 En un sistema microinformático equipado con impresoras, cartuchos de tinta, cartuchos de «tóner», formularios de papel, pliegos de etiquetas adhesivas, sobres, entre otros, realizar la sustitución de elementos consumibles siguiendo unas instrucciones detalladas:
+Preparar el elemento consumible como paso previo a la sustitución.
+  - Interpretar las guías del dispositivo para proceder a la alimentación de papel según necesidades.
+  - Sustituir los elementos consumibles cumpliendo las normas de seguridad establecidas.
+  - Reemplazar los elementos consumibles.
+  - Aplicar los procedimientos de verificación y prueba de los periféricos.
+  - Utilizar los medios necesarios para la recuperación y reciclaje de materiales consumibles según condicionantes medioambientales.
+  - Verificar que después de realizar la sustitución del elemento fungible y consumible el dispositivo informático mantiene su funcionalidad.
+  - Registrar las operaciones realizadas siguiendo los formatos dados.
