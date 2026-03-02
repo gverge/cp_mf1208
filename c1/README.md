@@ -156,6 +156,134 @@ Un **SAI (Uninterruptible Power Supply)** és un dispositiu de manteniment preve
 - Elimina harmònics en el corrent altern.
 - **Utilitat**: evita pèrdua de dades i danys en components per fluctuacions elèctriques.
 
+
+
+# 🛠️ Guia de Diagnòstic i Monitoratge en Linux
+
+Aquest document recull les eines essencials per supervisar el rendiment, la xarxa i l'estat general d'un sistema Linux.
+
+## 1. Monitoratge de Processos i CPU
+
+Per entendre què està consumint els recursos de càlcul i com es distribueix la càrrega.
+
+## `top` i `htop`
+
+- **top**: L'eina clàssica instal·lada per defecte. Mostra processos en temps real, l'ús de la CPU i la memòria.
+    
+- **htop**: Una versió evolucionada, molt més visual i intuïtiva (permet fer scroll i matar processos amb la tecla **F9**).
+    
+
+Bash
+
+```
+# Executar htop (si no el tens: sudo apt install htop)
+htop
+```
+
+## `uptime` i `lscpu`
+
+- **uptime**: Indica quant de temps fa que el sistema està encès i el **load average** (càrrega mitjana en els darrers 1, 5 i 15 minuts).
+    
+- **lscpu**: Mostra l'arquitectura de la CPU, el nombre de nuclis i les freqüències de treball.
+    
+
+---
+
+## 2. Diagnòstic de Memòria i Emmagatzematge
+
+Si el sistema es nota "lent", el problema sol ser la memòria d'intercanvi (SWAP) o un disc ple.
+
+## `free -m`
+
+Mostra la memòria RAM utilitzada, lliure i en memòria cau (cache) en megabytes.
+
+> **Consell:** Fixa't en la columna "available"; és la memòria real que el sistema pot utilitzar abans de començar a fer servir el disc (cosa que alenteix tot).
+
+## `df -h` i `du -sh`
+
+- **df -h**: Mostra l'espai lliure en tots els discs muntats en format "humà" (GB, MB).
+    
+- **du -sh * **: Analitza la mida dels directoris en la ruta actual per trobar carpetes massa pesades.
+    
+
+---
+
+## 3. Monitoratge de Xarxa
+
+Eines fonamentals per verificar connexions obertes, ports i tràfic de dades.
+
+## `ss` i `netstat`
+
+Antigament es feia servir `netstat`, però actualment es recomana `ss` perquè és més ràpid i eficient en sistemes moderns.
+
+- **Veure ports escoltant (TCP/UDP):**
+    
+    Bash
+    
+    ```
+    ss -tunlp
+    ```
+    
+    _(t: tcp, u: udp, n: numèric, l: listening, p: procés)_
+    
+
+## `ip a` i `ping`
+
+- **ip a**: El substitut modern d' `ifconfig`. Mostra les adreces IP i l'estat de les interfícies de xarxa.
+    
+- **ping [host]**: Verifica la latència i si hi ha pèrdua de paquets cap a un servidor extern.
+    
+
+---
+
+## 4. Anàlisi de Registres (Logs)
+
+Quan alguna cosa falla sense motiu aparent, els "logs" tenen la resposta.
+
+## `journalctl`
+
+És el comandament central per a sistemes que fan servir **systemd**.
+
+- **Veure logs en temps real:** `journalctl -f`
+    
+- **Errors de la sessió actual:** `journalctl -p err -b`
+    
+
+## `/var/log/`
+
+Directori principal on es guarden els fitxers de registre:
+
+- `/var/log/auth.log`: Intents d'inici de sessió (seguretat).
+    
+- `/var/log/syslog`: Esdeveniments generals del sistema.
+    
+
+---
+
+## 5. Proves de Càrrega i Rendiment (Stress Test)
+
+Si vols comprovar si el sistema és estable sota pressió.
+
+|Eina|Ús Principal|Comandament d'exemple|
+|---|---|---|
+|**Stress**|Estressar CPU, RAM i I/O|`stress --cpu 4 --timeout 30s`|
+|**Iostat**|Monitorar velocitat del disc|`iostat -xz 1`|
+|**Nload**|Veure tràfic de xarxa gràficament|`nload`|
+
+---
+
+## 📝 Resum de Comandaments Ràpids
+
+|Objectiu|Comandament|
+|---|---|
+|**Qui consumeix la CPU?**|`top` o `htop`|
+|**Tinc RAM lliure?**|`free -h`|
+|**Quins ports estan oberts?**|`ss -lntu`|
+|**El disc està ple?**|`df -h`|
+|**Per què ha fallat un servei?**|`journalctl -u [nom_del_servei] -e`|
+
+
+
 ---
 
 ## Exercicis proposats
