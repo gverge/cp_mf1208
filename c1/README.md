@@ -203,7 +203,7 @@ Mostra la memòria RAM utilitzada, lliure i en memòria cau (cache) en megabytes
 
 - **df -h**: Mostra l'espai lliure en tots els discs muntats en format "humà" (GB, MB).
     
-- **du -sh * **: Analitza la mida dels directoris en la ruta actual per trobar carpetes massa pesades.
+- **du -sh**: Analitza la mida dels directoris en la ruta actual per trobar carpetes massa pesades.
     
 
 ---
